@@ -18,11 +18,11 @@ public class Loader {
         int i = 1;
         while (i == 1) {
             File[] arrFiles = dir.listFiles();
-            List<File> lst = Arrays.asList(arrFiles);
 
-            if (lst.size() != 0) {
+
+            if (arrFiles.length != 0) {
                 ExecutorService executorService = Executors.newFixedThreadPool(5);
-                ExecutorService executorDeleteService = Executors.newSingleThreadExecutor();
+                ExecutorService executorDeleteService = Executors.newFixedThreadPool(5);
                 for (int j = 0; j < arrFiles.length; j++) {
 
 
