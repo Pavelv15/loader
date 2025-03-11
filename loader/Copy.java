@@ -20,7 +20,12 @@ public class Copy implements Runnable {
     public void run() {
 
 
-        Path destDir = Paths.get("C:\\Test\\output");
+        try {
+            Configurator.getDir();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        Path destDir = Paths.get(Configurator.out);
 
 
                 try {
@@ -30,6 +35,7 @@ public class Copy implements Runnable {
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 }
+                System.out.printf("Обработан запроc копирования #%s в потоке %s\n",file,Thread.currentThread().getName());
 
 
             }

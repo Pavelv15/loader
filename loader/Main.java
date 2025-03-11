@@ -1,11 +1,17 @@
 package loader;
 
 import java.io.File;
+import java.io.IOException;
+import java.lang.module.Configuration;
 
 public class Main {
-    public static void main(String[] args) throws InterruptedException {
-        File dir = new File("C:\\Test\\input\\");
+    public static void main(String[] args) throws InterruptedException, IOException {
+        Configurator.getDir();
+
+        System.out.println(Configurator.in);
+
+        File dir = new File(Configurator.in);
         Loader t  = new Loader(dir);
-        Loader.start();
+        t.start();
     }
 }

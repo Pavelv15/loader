@@ -14,7 +14,7 @@ public class Loader {
 
     }
 
-    public  static void start() throws InterruptedException {
+    public   void start() throws InterruptedException {
         int i = 1;
         while (i == 1) {
             File[] arrFiles = dir.listFiles();
@@ -36,9 +36,9 @@ public class Loader {
                 executorService.shutdown();
                 executorDeleteService.shutdown();
             }
-            else {
-                System.out.println("пусто");
-            }
+//            else {
+//                System.out.println("пусто");
+//            }
 
         }
     }

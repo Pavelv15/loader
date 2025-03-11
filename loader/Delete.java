@@ -13,6 +13,8 @@ public class Delete implements Runnable  {
     public void run() {
 
             dir.delete();
+            System.out.printf("Обработан запроc удаления #%s в потоке %s\n",dir,Thread.currentThread().getName());
+
 
 
     }
