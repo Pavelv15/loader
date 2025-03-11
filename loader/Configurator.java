@@ -8,8 +8,12 @@ import java.util.Properties;
 public class Configurator {
     static String in,out;
     static void getDir() throws IOException {
-
-        File file = new File("./application.properties");
+        /* В application.properties задаётся пути ввод и вывода
+        * Пример 
+        * Input=C:\\Test\\input\\    - Переменная, где указывается путь входной папки
+        * Output=C:\\Test\\output\\   - Переменная, где указывается путь выводной папки
+        */
+        File file = new File("./application.properties"); 
 
 
         Properties properties = new Properties();
