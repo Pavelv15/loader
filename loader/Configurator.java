@@ -9,7 +9,7 @@ public class Configurator {
     static String in,out;
     static void getDir() throws IOException {
 
-        File file = new File("./test.properties");
+        File file = new File("./application.properties");
 
 
         Properties properties = new Properties();
