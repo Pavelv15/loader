@@ -1,6 +1,7 @@
 package loader;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
@@ -9,12 +10,13 @@ import java.util.concurrent.Executors;
 public class Loader {
     private static File dir = null;
 
-    public Loader( File dir) {
-        this.dir = dir;
+    public Loader() throws IOException {
+        Configurator.getDir();
+        this.dir = new File(Configurator.in);;
 
     }
 
-    public   void start() throws InterruptedException {
+    public  void start() throws InterruptedException {
         int i = 1;
         while (i == 1) {
             File[] arrFiles = dir.listFiles();

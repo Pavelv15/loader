@@ -6,12 +6,10 @@ import java.lang.module.Configuration;
 
 public class Main {
     public static void main(String[] args) throws InterruptedException, IOException {
-        Configurator.getDir();
+        Loader loader = new Loader();
 
-        System.out.println(Configurator.in);
+        loader.start();
 
-        File dir = new File(Configurator.in);
-        Loader t  = new Loader(dir);
-        t.start();
+
     }
 }
