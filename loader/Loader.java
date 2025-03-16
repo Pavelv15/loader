@@ -23,8 +23,8 @@ public class Loader {
 
 
             if (arrFiles.length != 0) {
-                ExecutorService executorService = Executors.newFixedThreadPool(5);
-                ExecutorService executorDeleteService = Executors.newFixedThreadPool(5);
+                ExecutorService executorService = Executors.newCachedThreadPool();
+                ExecutorService executorDeleteService = Executors.newCachedThreadPool();
                 for (int j = 0; j < arrFiles.length; j++) {
 
 
